@@ -64,18 +64,25 @@ Table of every file created, with ⚠️ on anything that still needs attention.
 
 Claude starts every session cold. Without context, it guesses — wrong tokens, wrong patterns, wrong scope. These docs give it the full picture upfront so the first thing it generates is already correct.
 
-### How to install
+### How to install and use
 
-**All projects (global):**
+**Step 1 — Open your project in Claude Code**
+
+Any existing project or a new empty folder works.
+
+**Step 2 — Run this in your terminal**
+
 ```bash
 mkdir -p ~/.claude/commands && curl -o ~/.claude/commands/scaffold-project.md \
   https://raw.githubusercontent.com/leobyday/Claude-Design-Scaffolding/main/scaffold-project.md
 ```
 
-**Single project:**
-```bash
-mkdir -p .claude/commands && curl -o .claude/commands/scaffold-project.md \
-  https://raw.githubusercontent.com/leobyday/Claude-Design-Scaffolding/main/scaffold-project.md
+This installs the skill globally — you only need to do this once. It will be available in every project from that point on.
+
+**Step 3 — Type this in Claude Code**
+
+```
+/scaffold-project your-project-name
 ```
 
-After running either command, `/scaffold-project` is available immediately in Claude Code — no restart needed.
+Claude will scan your files, ask you a few questions, then generate the full doc structure.
