@@ -66,12 +66,16 @@ Claude starts every session cold. Without context, it guesses — wrong tokens, 
 
 ### How to install
 
-**Single project:**
-```bash
-cp scaffold-project.md /your-project/.claude/commands/scaffold-project.md
-```
-
 **All projects (global):**
 ```bash
-cp scaffold-project.md ~/.claude/commands/scaffold-project.md
+mkdir -p ~/.claude/commands && curl -o ~/.claude/commands/scaffold-project.md \
+  https://raw.githubusercontent.com/leobyday/Claude-Design-Scaffolding/main/scaffold-project.md
 ```
+
+**Single project:**
+```bash
+mkdir -p .claude/commands && curl -o .claude/commands/scaffold-project.md \
+  https://raw.githubusercontent.com/leobyday/Claude-Design-Scaffolding/main/scaffold-project.md
+```
+
+After running either command, `/scaffold-project` is available immediately in Claude Code — no restart needed.
