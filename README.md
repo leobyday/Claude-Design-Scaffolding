@@ -40,7 +40,7 @@ In a single message, asks only what it couldn't find:
 
 Waits for your answers before creating anything.
 
-**Step 3 — Creates 7 files**
+**Step 3 — Creates 7 files** (Thanks uxplanet.org)
 
 ```
 /project-name
