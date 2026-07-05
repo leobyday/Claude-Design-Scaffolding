@@ -4,6 +4,15 @@ A collection of reusable slash commands for Claude Code. Drop any skill into a p
 
 ---
 
+## Available Commands
+
+| Command | Description | When to run |
+|---|---|---|
+| `/scaffold-project` | Creates a full doc structure pre-filled from your codebase | Before writing any code on a new or existing project |
+| `/seo-geo` | Audits and fixes discoverability for search engines, AI systems, and MCP crawlers | Before launch, or on any page that needs SEO/GEO coverage |
+
+---
+
 ## `/scaffold-project`
 
 Creates a full documentation structure for any project, pre-filled with real content from the codebase and your answers. The goal is to give Claude a source of truth before it generates a single line of code.
@@ -86,3 +95,39 @@ This installs the skill globally — you only need to do this once. It will be a
 ```
 
 Claude will scan your files, ask you a few questions, then generate the full doc structure.
+
+---
+
+## `/seo-geo`
+
+Audits and fixes discoverability for search engines, AI systems, and MCP directory crawlers. Runs 10 tasks covering meta tags, Open Graph, JSON-LD structured data, JS-rendered content, sitemap, robots.txt, internal linking, and analytics — then self-audits with a verification checklist.
+
+### Usage
+
+```
+/seo-geo                  ← runs on every public page
+/seo-geo learn.html       ← runs on one specific page
+```
+
+### How to install and use
+
+**Step 1 — Open your project in Claude Code**
+
+**Step 2 — Run this in your terminal**
+
+```bash
+mkdir -p ~/.claude/commands && curl -o ~/.claude/commands/seo-geo.md \
+  https://raw.githubusercontent.com/leobyday/Claude-Design-Scaffolding/main/seo-geo.md
+```
+
+**Step 3 — Type this in Claude Code**
+
+```
+/seo-geo
+```
+
+or target a single page:
+
+```
+/seo-geo your-page.html
+```
